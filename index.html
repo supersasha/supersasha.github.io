@@ -12,8 +12,11 @@
     <label for="domain">Domain:</label>
     <input id="domain" type="text" />
 
-    <label for="modification">Modification number:</label>
-    <input id="modification" type="number" min="1" value="1" />
+    <label for="version">Version:</label>
+    <input id="version" type="number" min="1" value="1" />
+    
+    <label for="length">Length:</label>
+    <input id="length" type="number" min="4" value="20" max="21" />
 
     <fieldset>
       <legend>Choose character classes:</legend>
@@ -39,6 +42,6 @@
       </div>
     </fieldset>
 
-    <button>Generate and copy</button>
+    <button onclick="generate()">Generate and copy</button>
   </body>
 </html>
