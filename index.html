@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="index.js?rev=1"></script>
     <link rel="stylesheet" href="index.css">
   </head>
@@ -14,32 +15,32 @@
 
     <label for="version">Version:</label>
     <input id="version" type="number" min="1" value="1" />
-    
+
     <label for="length">Length:</label>
     <input id="length" type="number" min="4" value="20" max="21" />
 
     <fieldset>
       <legend>Choose character classes:</legend>
 
-      <div>
+      <label class="checkbox-container">
         <input type="checkbox" id="letters" checked />
-        <label class="cb" for="letters">small letters a..z</label>
-      </div>
+        <span class="checkbox-label">small letters a..z</span>
+      </label>
 
-      <div>
+      <label class="checkbox-container">
         <input type="checkbox" id="capitals" checked />
-        <label class="cb" for="capitals">capital letters A..Z</label>
-      </div>
+        <span class="checkbox-label">capital letters A..Z</span>
+      </label>
 
-      <div>
+      <label class="checkbox-container">
         <input type="checkbox" id="digits" checked />
-        <label class="cb" for="digits">digits 0..9</label>
-      </div>
+        <span class="checkbox-label">digits 0..9</span>
+      </label>
 
-      <div>
+      <label class="checkbox-container">
         <input type="checkbox" id="symbols" checked />
-        <label class="cb" for="symbols">symbols !#$%&()*+-;&lt;=&gt;?@^_`{|}~</label>
-      </div>
+        <span class="checkbox-label">symbols !#$%&()*+-;&lt;=&gt;?@^_`{|}~</span>
+      </label>
     </fieldset>
 
     <button onclick="generate()">Generate and copy</button>
