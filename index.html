@@ -3,21 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="index.js?rev=1"></script>
-    <link rel="stylesheet" href="index.css">
+    <script src="index.js?rev=8"></script>
+    <link rel="stylesheet" href="index.css?rev=6">
   </head>
   <body>
+    <label for="username">Username:</label>
+    <input id="username" type="text" />
+
     <label for="master">Master password:</label>
     <input id="master" type="password" />
 
     <label for="domain">Domain:</label>
     <input id="domain" type="text" />
-
-    <label for="version">Version:</label>
-    <input id="version" type="number" min="1" value="1" />
-
-    <label for="length">Length:</label>
-    <input id="length" type="number" min="4" value="20" max="21" />
 
     <fieldset>
       <legend>Choose character classes:</legend>
@@ -43,6 +40,26 @@
       </label>
     </fieldset>
 
+    <div class="numbers-box">
+      <div>
+        <label for="version">Version:</label>
+        <input id="version" type="number" min="1" value="1" max="99" />
+      </div>
+      <div>
+        <label for="length">Length:</label>
+        <input id="length" type="number" min="4" value="20" max="21" />
+      </div>
+    </div>
+
     <button onclick="generate()">Generate and copy</button>
+
+    <label for="genpass">Generated password:</label>
+    <input id="genpass" type="password" />
+
+    <label class="checkbox-container">
+      <input type="checkbox" id="show" oninput="toggleShow()" />
+      <span class="checkbox-label">Show password</span>
+    </label>
+
   </body>
 </html>
